@@ -1,12 +1,11 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-#[\AllowDynamicProperties]
 
-class Product_model extends CI_Model
+class Prodi_model extends CI_Model
 {
-  public $table = 'product';
-  public $id = 'product.id';
 
+  public $table = 'prodi';
+  public $id = 'prodi.id';
   public function __construct()
   {
     parent::__construct();
@@ -33,7 +32,7 @@ class Product_model extends CI_Model
   public function insert($data)
   {
     $this->db->insert($this->table, $data);
-    return $this->db->insert_id('product', $data);
+    return $this->db->insert_id();
   }
   public function delete($id)
   {
